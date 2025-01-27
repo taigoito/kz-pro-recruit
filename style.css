@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Normalize
  */
@@ -9,7 +8,7 @@
 }
 
 html {
-  font-size: min(3.84vw, 16px);
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
@@ -17,9 +16,9 @@ body {
   margin: 0;
   background-color: #ffffff;
   color: #262626;
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
-  line-height: 1.8;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  line-height: 1.92;
   letter-spacing: 0;
   -webkit-text-size-adjust: 100%;
 }
@@ -27,26 +26,26 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  font-family: "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 5.33vw, 4rem);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 h5 {
@@ -68,7 +67,7 @@ li {
 
 small {
   font-size: 0.875rem;
-  line-height: 1.8;
+  line-height: 1.92;
   letter-spacing: 0;
 }
 
@@ -81,7 +80,7 @@ blockquote {
 blockquote p, blockquote cite {
   font-style: italic;
   font-size: 0.875rem;
-  line-height: 1.8;
+  line-height: 1.92;
   letter-spacing: 0;
 }
 
@@ -90,8 +89,8 @@ a, a:active {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #3399cc;
-  text-decoration: underline;
+  color: #036eb8;
+  text-decoration: none;
 }
 
 img {
@@ -107,7 +106,7 @@ figure {
 
 figcaption {
   font-size: 0.875rem;
-  line-height: 1.8;
+  line-height: 1.92;
   letter-spacing: 0;
   text-align: center;
 }
@@ -126,6 +125,100 @@ button, input, select, textarea {
 }
 
 /**
+ * Header
+ */
+.header {
+  position: relative;
+  width: 100%;
+  height: 62.5vw;
+  background: url("./assets/mv.jpg") no-repeat 50% 50%/cover scroll;
+}
+@media (min-width: 1125px) {
+  .header {
+    height: 100vh;
+  }
+}
+
+/**
+ * G Nav
+ */
+.gNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.75rem;
+}
+.gNav__siteBrand {
+  flex: 0 0 auto;
+  width: 9rem;
+  margin: 0;
+  font-size: 1rem;
+}
+@media (min-width: 750px) {
+  .gNav__siteBrand {
+    width: 18rem;
+  }
+}
+.gNav__primaryMenu {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  margin: 0;
+}
+@media (min-width: 750px) {
+  .gNav__primaryMenu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 0 0 auto;
+  }
+}
+.gNav__menuItem {
+  flex: 0 0 auto;
+  margin: 0;
+}
+.gNav__menuItem a {
+  color: #ffffff;
+}
+.gNav__menuItem a:hover {
+  opacity: 0.85;
+}
+.gNav__menuItem--button a {
+  background-color: #00b2ed;
+  color: #ffffff;
+  display: block;
+  width: 10.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 3rem;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.gNav__menuItem--button a a, .gNav__menuItem--button a a:active, .gNav__menuItem--button a a:hover, .gNav__menuItem--button a a:focus {
+  color: #ffffff;
+}
+.gNav__menuItem--button a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+/**
  * Section
  */
 .section {
@@ -136,8 +229,8 @@ button, input, select, textarea {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(0.75rem, 2%, 24px);
-  padding-right: clamp(0.75rem, 2%, 24px);
+  padding-left: clamp(0.75rem, 2%, 1.5rem);
+  padding-right: clamp(0.75rem, 2%, 1.5rem);
 }
 .section__row {
   display: flex;

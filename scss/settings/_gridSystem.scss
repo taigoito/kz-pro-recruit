@@ -64,11 +64,11 @@ $spacingValues:  (
 
 // ガター
 // 行を生成することで、コンテナの端とコンテンツ間が、それぞれ1.5rem空く仕様
-$gutter:         space() !default;
+$gutter:         $gridBase / 8 !default;
 $containerPad:   (
   sm:              $gutter,
-  md:              clamp(#{$gutter}, 2%, 18px),
-  lg:              clamp(#{$gutter}, 2%, 24px)
+  md:              clamp(#{$gutter}, 2%, #{$gridBase / 6}),
+  lg:              clamp(#{$gutter}, 2%, #{$gridBase / 4})
 ) !default;
 
 // コンテナ生成

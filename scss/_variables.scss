@@ -1,6 +1,38 @@
 // Variables
 
-//$fontFamilySansSerif:  "Noto Sans JP", sans-serif;
-//$fontFamilySerif:      "Noto Serif JP", serif;
-//$fontWeightSansSerif:  400;
-//$fontWeightSerif:      400;
+// Color System
+$themeColors:    (
+  darkest:         #262626, // 15%
+  darker:          #4d4d4d, // 30%
+  dark:            #808080, // 50%
+  light:           #b3b3b3, // 70%
+  lighter:         #d9d9d9, // 85%
+  lightest:        #ffffff, // 100%
+  primaryDark:     #0a4b91,
+  primary:         #036eb8,
+  primaryLight:    #00b2ed
+);
+
+// Grid System
+$fontSizeBase:   15px;
+$rootFontSize:   $fontSizeBase;
+$imgAspectRatio: 4 / 3;
+$breakpoints:    (
+  sm:              $fontSizeBase * 40, // WordPressブロックエディタのBP (600px)
+  md:              $fontSizeBase * 50,
+  lg:              $fontSizeBase * 75
+);
+
+// Typography
+$fontFamilySansSerif:  "Noto Sans JP", sans-serif;
+$fontWeightSansSerif:  600;
+$fontSizes:            (
+  xs:                    0.75rem,  //  6/8
+  sm:                    0.875rem, //  7/8
+  nr:                    1rem,     //  8/8
+  md:                    1.25rem,  // 10/8
+  lg:                    1.5rem,   // 12/8
+  xl:                    2rem,     // 16/8
+  xxl:                   clamp(1.75rem, 5.33vw, 4rem), // 32/8
+);
+$linkHoverDecoration:  none;

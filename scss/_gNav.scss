@@ -1,0 +1,54 @@
+/**
+ * G Nav
+ */
+
+.gNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include row(space-between);
+  width: 100%;
+  padding: 0 space();
+
+  &__siteBrand {
+    flex: 0 0 auto;
+    width: 9rem;
+    margin: 0;
+    font-size: map-get($fontSizes, "nr");
+
+    @media (min-width: breakpoint("md")) {
+      width: 18rem;
+    }
+  }
+
+  &__primaryMenu {
+    @include listUnstyled();
+    display: none;
+    margin: 0;
+
+    @media (min-width: breakpoint("md")) {
+      @include row(space-between);
+      gap: space(3);
+      flex: 0 0 auto;
+    }
+  }
+
+  &__menuItem {
+    flex: 0 0 auto;
+    margin: 0;
+
+    a {
+      color: themeColor("lightest");
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+
+    &--button {
+      a {
+        @include button("primaryLight", 10.5rem, space(4));
+      }
+    }
+  }
+}
