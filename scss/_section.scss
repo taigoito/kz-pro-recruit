@@ -27,10 +27,10 @@
   &--01 {
     margin-top: - (space(4) + space(3));
     padding-top: space(5);
-    background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(themeColor("primaryLight"), 0.5) 15%, rgba(255, 255, 255, 0) 25%);
+    background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(themeColor("primaryLight"), 0.5) 15%, rgba(255, 255, 255, 0) 25%, rgba(themeColor("primary"), 0.15) 100%);
 
     @media (min-width: breakpoint("md")) {
-      background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(themeColor("primaryLight"), 0.5) 50%, rgba(255, 255, 255, 0) 85%);
+      background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(themeColor("primaryLight"), 0.5) 50%, rgba(255, 255, 255, 0) 85%, rgba(themeColor("primary"), 0.15) 100%);
     }
 
     &__row {
@@ -39,7 +39,7 @@
     }
 
     &__image {
-      @include col(2, true, "sm");
+      @include col(2, true);
 
       img {
         border-radius: space();
@@ -47,15 +47,15 @@
     }
 
     &__personInfo {
-      color: themeColor("primary");
+      color: themeColor("primaryDark");
       font-weight: 900;
       font-size: map-get($fontSizes, "nr");
     }
 
     &__personName {
-      color: themeColor("primary");
+      color: themeColor("primaryDark");
       font-weight: 900;
-      font-size: map-get($fontSizes, "xl");
+      font-size: map-get($fontSizes, "lg");
 
       span {
         font-size: 0.75em;
@@ -67,23 +67,110 @@
     }
 
     &__content {
-      @include col(6, true, "sm");
+      @include col(6, true);
     }
 
     &__subHeading {
       width: fit-content;
       margin-top: space();
-      padding: 0 space();
       background-color: themeColor("lightest");
       color: themeColor("primaryLight");
       font-weight: 900;
-      font-size: map-get($fontSizes, "xxl");
+      font-size: map-get($fontSizes, "xl");
+
+      @media (min-width: breakpoint("md")) {
+        padding: 0 space();
+      }
     }
 
     &__figure {
       top: - space(5);
       right: - space(2);
       width: min(50%, 30rem);
+    }
+  }
+
+  &--02 {
+    background-color: themeColor("lightest");
+
+    &__subSection--01 {
+      position: relative;
+      padding: space(3);
+      border-radius: space(3);
+      @include background("primary");
+
+      @media (min-width: breakpoint("md")) {
+        padding: space(4);
+      }
+    }
+
+    &__subHeading--01 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: map-get($fontSizes, "xxl");
+    }
+
+    &__content--01 {
+      @media (min-width: breakpoint("md")) {
+        width: 50%;
+      }
+    }
+
+    &__image--01 {
+      width: 100%;
+
+      @media (min-width: breakpoint("md")) {
+        position: absolute;
+        top: - space(3);
+        right: - space(3);
+        width: 50%;
+      }
+    }
+
+    &__subHeading--02 {
+      color: themeColor("primary");
+      font-size: map-get($fontSizes, "xxl");
+      text-align: center;
+    }
+
+    &__row {
+      @include row(space-around, stretch);
+      align-items: stretch;
+    }
+
+    &__content--02 {
+      @include col(4, true);
+      padding: space(3);
+    }
+
+    &__contentInner {
+      height: 100%;
+      padding: space(3);
+      border: 1px solid themeColor("primaryLight");
+      border-radius: space(3);
+      box-shadow: space(2) space(2) space(1) 0 rgba(themeColor("primaryLight"), 0.5);
+
+      @media (min-width: breakpoint("md")) {
+        padding: space(3) space(4);
+      }
+    }
+
+    &__headline {
+      color: themeColor("primary");
+      font-size: map-get($fontSizes, "lg");
+      text-align: center;
+    }
+
+    &__content--03 {
+      color: themeColor("primary");
+      font-size: map-get($fontSizes, "md");
+      text-align: center;
+    }
+
+    &__figure {
+      top: - space(4);
+      width: min(40%, 24rem);
     }
   }
 }

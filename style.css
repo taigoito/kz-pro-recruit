@@ -247,11 +247,11 @@ button, input, select, textarea {
 .section--01 {
   margin-top: -4.5rem;
   padding-top: 6rem;
-  background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(0, 178, 237, 0.5) 15%, rgba(255, 255, 255, 0) 25%);
+  background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(0, 178, 237, 0.5) 15%, rgba(255, 255, 255, 0) 25%, rgba(3, 110, 184, 0.15) 100%);
 }
 @media (min-width: 843.75px) {
   .section--01 {
-    background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(0, 178, 237, 0.5) 50%, rgba(255, 255, 255, 0) 85%);
+    background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(0, 178, 237, 0.5) 50%, rgba(255, 255, 255, 0) 85%, rgba(3, 110, 184, 0.15) 100%);
   }
 }
 .section--01__row {
@@ -262,30 +262,26 @@ button, input, select, textarea {
   margin: 1.5rem 0;
 }
 .section--01__image {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 12rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-@media (min-width: 562.5px) {
-  .section--01__image {
-    flex-grow: 2;
-    flex-shrink: 2;
-    flex-basis: 12rem;
-  }
-}
 .section--01__image img {
   border-radius: 0.75rem;
 }
 .section--01__personInfo {
-  color: #036eb8;
+  color: #0a4b91;
   font-weight: 900;
   font-size: 1rem;
 }
 .section--01__personName {
-  color: #036eb8;
+  color: #0a4b91;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .section--01__personName span {
   font-size: 0.75em;
@@ -294,30 +290,118 @@ button, input, select, textarea {
   letter-spacing: -3px;
 }
 .section--01__content {
+  flex-grow: 6;
+  flex-shrink: 6;
+  flex-basis: 36rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-@media (min-width: 562.5px) {
-  .section--01__content {
-    flex-grow: 6;
-    flex-shrink: 6;
-    flex-basis: 36rem;
-  }
-}
 .section--01__subHeading {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 0.75rem;
-  padding: 0 0.75rem;
   background-color: #ffffff;
   color: #00b2ed;
   font-weight: 900;
-  font-size: clamp(1.75rem, 5.33vw, 4rem);
+  font-size: 2rem;
+}
+@media (min-width: 843.75px) {
+  .section--01__subHeading {
+    padding: 0 0.75rem;
+  }
 }
 .section--01__figure {
   top: -6rem;
   right: -0.75rem;
   width: min(50%, 30rem);
+}
+.section--02 {
+  background-color: #ffffff;
+}
+.section--02__subSection--01 {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #036eb8;
+  color: #ffffff;
+}
+.section--02__subSection--01 a, .section--02__subSection--01 a:active, .section--02__subSection--01 a:hover, .section--02__subSection--01 a:focus {
+  color: #ffffff;
+}
+@media (min-width: 843.75px) {
+  .section--02__subSection--01 {
+    padding: 3rem;
+  }
+}
+.section--02__subHeading--01 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(1.75rem, 5.33vw, 4rem);
+}
+@media (min-width: 843.75px) {
+  .section--02__content--01 {
+    width: 50%;
+  }
+}
+.section--02__image--01 {
+  width: 100%;
+}
+@media (min-width: 843.75px) {
+  .section--02__image--01 {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    width: 50%;
+  }
+}
+.section--02__subHeading--02 {
+  color: #036eb8;
+  font-size: clamp(1.75rem, 5.33vw, 4rem);
+  text-align: center;
+}
+.section--02__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-items: stretch;
+}
+.section--02__content--02 {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 1.5rem;
+}
+.section--02__contentInner {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid #00b2ed;
+  border-radius: 1.5rem;
+  box-shadow: 0.75rem 0.75rem 0.375rem 0 rgba(0, 178, 237, 0.5);
+}
+@media (min-width: 843.75px) {
+  .section--02__contentInner {
+    padding: 1.5rem 3rem;
+  }
+}
+.section--02__headline {
+  color: #036eb8;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.section--02__content--03 {
+  color: #036eb8;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.section--02__figure {
+  top: -3rem;
+  width: min(40%, 24rem);
 }
