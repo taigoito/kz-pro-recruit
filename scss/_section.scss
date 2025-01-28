@@ -5,12 +5,85 @@
 .section {
   position: relative;
   padding: space(3) 0;
+  overflow: hidden;
 
   &__container {
+    position: relative;
     @include container();
   }
 
-  &__row {
-    @include row();
+  &__heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: space(3);
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &--01 {
+    margin-top: - (space(4) + space(3));
+    padding-top: space(5);
+    background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(themeColor("primaryLight"), 0.5) 15%, rgba(255, 255, 255, 0) 25%);
+
+    @media (min-width: breakpoint("md")) {
+      background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(themeColor("primaryLight"), 0.5) 50%, rgba(255, 255, 255, 0) 85%);
+    }
+
+    &__row {
+      @include row(space-around, flex-start);
+      margin: space(3) 0;
+    }
+
+    &__image {
+      @include col(2, true, "sm");
+
+      img {
+        border-radius: space();
+      }
+    }
+
+    &__personInfo {
+      color: themeColor("primary");
+      font-weight: 900;
+      font-size: map-get($fontSizes, "nr");
+    }
+
+    &__personName {
+      color: themeColor("primary");
+      font-weight: 900;
+      font-size: map-get($fontSizes, "xl");
+
+      span {
+        font-size: 0.75em;
+      }
+
+      &--space_closing {
+        letter-spacing: -3px;
+      }
+    }
+
+    &__content {
+      @include col(6, true, "sm");
+    }
+
+    &__subHeading {
+      width: fit-content;
+      margin-top: space();
+      padding: 0 space();
+      background-color: themeColor("lightest");
+      color: themeColor("primaryLight");
+      font-weight: 900;
+      font-size: map-get($fontSizes, "xxl");
+    }
+
+    &__figure {
+      top: - space(5);
+      right: - space(2);
+      width: min(50%, 30rem);
+    }
   }
 }

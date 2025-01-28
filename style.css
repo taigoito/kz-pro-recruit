@@ -224,17 +224,100 @@ button, input, select, textarea {
 .section {
   position: relative;
   padding: 1.5rem 0;
+  overflow: hidden;
 }
 .section__container {
+  position: relative;
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: clamp(0.75rem, 2%, 1.5rem);
   padding-right: clamp(0.75rem, 2%, 1.5rem);
 }
-.section__row {
+.section__heading {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+.section__figure {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.section--01 {
+  margin-top: -4.5rem;
+  padding-top: 6rem;
+  background: linear-gradient(rgba(255, 255, 255, 0) 5%, rgba(0, 178, 237, 0.5) 15%, rgba(255, 255, 255, 0) 25%);
+}
+@media (min-width: 843.75px) {
+  .section--01 {
+    background: linear-gradient(rgba(255, 255, 255, 0) 15%, rgba(0, 178, 237, 0.5) 50%, rgba(255, 255, 255, 0) 85%);
+  }
+}
+.section--01__row {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+.section--01__image {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (min-width: 562.5px) {
+  .section--01__image {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 12rem;
+  }
+}
+.section--01__image img {
+  border-radius: 0.75rem;
+}
+.section--01__personInfo {
+  color: #036eb8;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.section--01__personName {
+  color: #036eb8;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.section--01__personName span {
+  font-size: 0.75em;
+}
+.section--01__personName--space_closing {
+  letter-spacing: -3px;
+}
+.section--01__content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (min-width: 562.5px) {
+  .section--01__content {
+    flex-grow: 6;
+    flex-shrink: 6;
+    flex-basis: 36rem;
+  }
+}
+.section--01__subHeading {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 0.75rem;
+  padding: 0 0.75rem;
+  background-color: #ffffff;
+  color: #00b2ed;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 5.33vw, 4rem);
+}
+.section--01__figure {
+  top: -6rem;
+  right: -0.75rem;
+  width: min(50%, 30rem);
 }
