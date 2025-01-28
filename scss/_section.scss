@@ -24,6 +24,10 @@
     right: 0;
   }
 
+  &__table {
+    @include table();
+  }
+
   &--01 {
     margin-top: - (space(4) + space(3));
     padding-top: space(5);
@@ -171,6 +175,107 @@
     &__figure {
       top: - space(4);
       width: min(40%, 24rem);
+    }
+  }
+
+  &--03 {
+    padding: space(5) 0;
+    background-color: themeColor("primaryLight");
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 25vw;
+    }
+
+    &::before {
+      top: 0;
+      background: url("./assets/section03_top.jpg") no-repeat 0 0 / cover scroll;
+    }
+
+    &::after {
+      bottom: 0;
+      background: url("./assets/section03_bottom.jpg") no-repeat 0 0 / cover scroll;
+    }
+
+    &__subSection--01 {
+      @include row(center, stretch, 0);
+    }
+
+    &__content {
+      @include col(3.5);
+      margin-bottom: space(3);
+
+      &:nth-child(2) {
+        @media (min-width: breakpoint("lg")) {
+          transform:translateY(space(4));
+        }
+      }
+    }
+
+    &__contentInner {
+      height: 100%;
+      padding: space(3);
+      background-color: themeColor("lightest");
+      color: themeColor("primaryLight");
+    }
+
+    &__image {
+      position: relative;
+      margin: - space(3);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6rem;
+        background: linear-gradient(rgba(themeColor("lightest"), 0), rgba(themeColor("lightest"), 1));
+      }
+    }
+
+    &__headline {
+      position: relative;
+      padding-top: space(3);
+      font-size: map-get($fontSizes, "lg");
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 3px;
+        background-color: themeColor("primaryLight");
+      }
+    }
+
+    &__subSection--02 {
+      position: relative;
+      z-index: 1;
+      max-width: 67.5rem;
+      margin: space(4) auto;
+      padding: space(3);
+      background: linear-gradient(135deg, lighten(themeColor("primaryLight"), 50%) 9%, themeColor("lightest") 10%, themeColor("lightest") 90%, lighten(themeColor("primaryLight"), 50%) 91%);
+    }
+
+    &__subHeading {
+      margin-bottom: space(3);
+      color: themeColor("primary");
+      font-size: map-get($fontSizes, "xxl");
+      text-align: center;
+    }
+
+    &__table {
+      max-width: 45rem;
+      margin: space(3) auto;
+
+      th {
+        color: themeColor("primary");
+      }
     }
   }
 }

@@ -3,14 +3,14 @@
 @mixin table() {
   width: 100%;
 
-  @media (max-width: breakpoint("sm") - 0.1px) {
+  @media (max-width: breakpoint("md") - 0.1px) {
     display: block;
   }
 
   thead, tbody {
     width: 100%;
 
-    @media (max-width: breakpoint("sm") - 0.1px) {
+    @media (max-width: breakpoint("md") - 0.1px) {
       display: block;
     }
   }
@@ -20,13 +20,13 @@
   }
 
   tr {
-    border-bottom: 1px solid themeColor("lighter");
+    //border-bottom: 1px solid themeColor("lighter");
 
     &:first-child {
-      border-top: 1px solid themeColor("lighter");
+      //border-top: 1px solid themeColor("lighter");
     }
 
-    @media (max-width: breakpoint("sm") - 0.1) {
+    @media (max-width: breakpoint("md") - 0.1) {
       display: block;
     }
   }
@@ -35,7 +35,7 @@
     padding: space();
     border: 0; // Reset
 
-    @media (max-width: breakpoint("sm") - 0.1) {
+    @media (max-width: breakpoint("md") - 0.1) {
       display: block;
     }
   }
