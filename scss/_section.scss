@@ -335,6 +335,7 @@
     }
 
     &__personInfo {
+      display: inline-block;
       font-size: 0.75em;
     }
 
@@ -342,7 +343,7 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      width: min(45%, 27rem);
+      width: min(50%, 30rem);
     }
   }
 
@@ -353,7 +354,7 @@
     background-position: center center;
 
     &__row {
-      @include row(space-around, center, 0);
+      @include row();
     }
 
     &__imageWrap {
@@ -428,6 +429,49 @@
       top: - space(4);
       right: - space(2);
       width: min(50%, 30rem);
+    }
+  }
+
+  &--06 {
+    &__row {
+      @include row();
+    }
+
+    &__button {
+      flex: 4 4 24rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__figure {
+      top: - space(4);
+      right: - space(2);
+      width: min(45%, 27rem);
+    }
+  }
+
+  &--recruit {
+    padding: space(5) 0;
+    background-color: themeColor("primaryLight");
+
+    &__row {
+      @include row(space-around, flex-start);
+    }
+
+    &__heading, &__buttons {
+      flex: 4 4 24rem;
+    }
+
+    &__heading img {
+      max-width: 30rem;
+    }
+
+    &__button {
+      &:hover {
+        opacity: 0.85;
+      }
     }
   }
 }

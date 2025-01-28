@@ -1,0 +1,50 @@
+/**
+ * Footer
+ */
+
+.footer {
+  padding: space(4) 0;
+
+  &__container {
+    @include container();
+  }
+
+  &__row {
+    @include row(space-between, flex-start);
+  }
+
+  &__siteBrand {
+    @include col(4);
+  }
+
+  &__content {
+    @include col(4);
+  }
+
+  &__primaryMenu {
+    @include listUnstyled();
+    @include row(center);
+    gap: space(3);
+    margin: 0;
+  }
+
+  &__menuItem {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  &__button {
+    @include button("primaryLight", 18rem, space(4));
+    margin: space(3) auto;
+
+    &, &:active, &:hover, &:focus {
+      color: themeColor("lightest");
+    }
+  }
+
+  &__copyright {
+    display: block;
+    color: themeColor("primary");
+    text-align: center;
+  }
+}
