@@ -28,6 +28,14 @@
     @include table();
   }
 
+  &__button {
+    @include button("primary", 12rem, space(4));
+
+    &, &:active, &:hover, &:focus {
+      color: themeColor("lightest");
+    }
+  }
+
   &--01 {
     margin-top: - (space(4) + space(3));
     padding-top: space(5);
@@ -201,7 +209,7 @@
     }
 
     &__subSection--01 {
-      @include row(center, stretch, 0);
+      @include row(center, stretch);
     }
 
     &__content {
@@ -276,6 +284,150 @@
       th {
         color: themeColor("primary");
       }
+    }
+  }
+
+  &--04 {
+    &__content {
+      position: relative;
+      margin: space(4) 0;
+      padding: space(3);
+      border-radius: space(3);
+      @include background("primaryLight");
+
+      @media (min-width: breakpoint("md")) {
+        padding: space(4);
+      }
+    }
+
+    &__subHeading {
+      position: absolute;
+      top: - space(4);
+      z-index: 1;
+      color: themeColor("primaryDark");
+      font-weight: 900;
+      font-size: map-get($fontSizes, "xl");
+      letter-spacing: 3px;
+    }
+
+    &__largeText {
+      position: relative;
+      z-index: 1;
+      margin-bottom: space(3);
+      font-weight: 900;
+      font-size: map-get($fontSizes, "xxl");
+      line-height: $headingLineHeight;
+    }
+
+    &__smallText {
+      position: relative;
+      z-index: 1;
+      font-weight: 900;
+      font-size: map-get($fontSizes, "lg");
+      line-height: $headingLineHeight;
+    }
+
+    &__personName {
+      margin-right: space();
+      padding: 0 space();
+      background-color: themeColor("lightest");
+      color: themeColor("primaryLight");
+    }
+
+    &__personInfo {
+      font-size: 0.75em;
+    }
+
+    &__image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(45%, 27rem);
+    }
+  }
+
+  &--05 {
+    background-image: linear-gradient(rgba(themeColor("primaryLight"), 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(themeColor("primaryLight"), 0.15) 1px, transparent 1px);
+    background-size: 15px 15px;
+    background-repeat: repeat;
+    background-position: center center;
+
+    &__row {
+      @include row(space-around, center, 0);
+    }
+
+    &__imageWrap {
+      position: relative;
+      @include col(4, true);
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: calc(100% + #{$gutter * 2});
+        height: 50vw;
+        margin: 0 -$gutter;
+        background: url("./assets/section05_bg.jpg") no-repeat 0 100% / cover scroll;
+
+        @media (min-width: breakpoint("md")) {
+          width: 50vw;
+          height: min(25vw, 24rem);
+          margin: 0;
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 20rem; // height: 24rem
+      margin: 0 auto space(4);
+      border-radius: space(3);
+    }
+
+    &__contentWrap {
+      @include col(4, true);
+    }
+
+    &__contentInner {
+      position: relative;
+      z-index: 1;
+      max-width: 24rem;
+      margin: space(4) auto 0;
+      padding: space(3);
+    }
+
+    &__lead {
+      font-size: map-get($fontSizes, "lg");
+
+      p {
+        margin: 0 0 space();
+        padding-bottom: space();
+        border-bottom: 2px solid themeColor("primaryDark");
+      }
+    }
+
+    &__personInfo {
+      color: themeColor("primary");
+    }
+
+    &__personName {
+      color: themeColor("primary");
+      font-size: map-get($fontSizes, "xl");
+    }
+
+    &__button {
+      width: 18rem;
+      margin-top: space(3);
+      margin-left: 0;
+    }
+
+    &__figure {
+      top: - space(4);
+      right: - space(2);
+      width: min(50%, 30rem);
     }
   }
 }

@@ -277,6 +277,32 @@ button, input, select, textarea {
     display: block;
   }
 }
+.section__button {
+  background-color: #036eb8;
+  color: #ffffff;
+  display: block;
+  width: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 3rem;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.section__button:hover {
+  opacity: 0.85;
+}
+.section__button, .section__button:active, .section__button:hover, .section__button:focus {
+  color: #ffffff;
+}
 .section--01 {
   margin-top: -4.5rem;
   padding-top: 6rem;
@@ -462,8 +488,8 @@ button, input, select, textarea {
   flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 .section--03__content {
   flex-grow: 0;
@@ -533,4 +559,146 @@ button, input, select, textarea {
 }
 .section--03__table th {
   color: #036eb8;
+}
+.section--04__content {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #00b2ed;
+  color: #ffffff;
+}
+@media (min-width: 750px) {
+  .section--04__content {
+    padding: 3rem;
+  }
+}
+.section--04__subHeading {
+  position: absolute;
+  top: -3rem;
+  z-index: 1;
+  color: #0a4b91;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+.section--04__largeText {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 5.33vw, 4rem);
+  line-height: 1.2;
+}
+.section--04__smallText {
+  position: relative;
+  z-index: 1;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.section--04__personName {
+  margin-right: 0.75rem;
+  padding: 0 0.75rem;
+  background-color: #ffffff;
+  color: #00b2ed;
+}
+.section--04__personInfo {
+  font-size: 0.75em;
+}
+.section--04__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(45%, 27rem);
+}
+.section--05 {
+  background-image: linear-gradient(rgba(0, 178, 237, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 178, 237, 0.15) 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-repeat: repeat;
+  background-position: center center;
+}
+.section--05__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+.section--05__imageWrap {
+  position: relative;
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.section--05__imageWrap::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100% + 1.5rem);
+  height: 50vw;
+  margin: -0.75rem;
+  background: url("./assets/section05_bg.jpg") no-repeat 0 100%/cover scroll;
+}
+@media (min-width: 750px) {
+  .section--05__imageWrap::before {
+    width: 50vw;
+    height: min(25vw, 24rem);
+    margin: 0;
+  }
+}
+.section--05__image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 20rem;
+  margin: 0 auto 3rem;
+  border-radius: 1.5rem;
+}
+.section--05__contentWrap {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.section--05__contentInner {
+  position: relative;
+  z-index: 1;
+  max-width: 24rem;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+}
+.section--05__lead {
+  font-size: 1.5rem;
+}
+.section--05__lead p {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #0a4b91;
+}
+.section--05__personInfo {
+  color: #036eb8;
+}
+.section--05__personName {
+  color: #036eb8;
+  font-size: 2rem;
+}
+.section--05__button {
+  width: 18rem;
+  margin-top: 1.5rem;
+  margin-left: 0;
+}
+.section--05__figure {
+  top: -3rem;
+  right: -0.75rem;
+  width: min(50%, 30rem);
 }
