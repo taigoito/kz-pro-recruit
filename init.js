@@ -18,15 +18,15 @@ window.addEventListener('scroll', () => {
 
 
 // Drawer Menu
-import DrawerMenu from './js/_drawerMenu.js';
+//import DrawerMenu from './js/_drawerMenu.js';
 new DrawerMenu({ darkMode: true });
 
 // Evil Icons
-import EvilIcons from './js/_evilIcons.js';
+//import EvilIcons from './js/_evilIcons.js';
 new EvilIcons();
 
 // Swiper
-import Swiper from 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.esm.browser.js';
+//import Swiper from 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.esm.browser.js';
 
 new Swiper('.swiper', {
   loop: true,

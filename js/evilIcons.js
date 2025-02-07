@@ -5,7 +5,7 @@
  * Copyright 2014-2016 Alexander Madyankin <alexander@madyankin.name>, Roman Shamin <al4emist.artway@gmail.com>
  */
 
-export default class EvilIcons {
+class EvilIcons {
 
   constructor() {
     document.addEventListener("DOMContentLoaded", () => {

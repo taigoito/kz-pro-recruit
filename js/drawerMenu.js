@@ -4,7 +4,7 @@
  * Location: Fukui, Japan
  */
 
-export default class DrawerMenu {
+class DrawerMenu {
 
   constructor(options = {}) {
     // 設定
